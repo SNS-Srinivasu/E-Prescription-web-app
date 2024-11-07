@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="h.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Prescription Form</title>
+    <link rel="stylesheet" href="index1.css">
+    <script>
+        function printPrescription() {
+            window.print();
+        }
+
+    </script>
+</head>
+<body>
+    <section id="prescription-form">
+        <h1>Medical Prescription</h1>
+        <form id="prescription-form-element" method="POST" action="/submit">
+            <h2>Doctor’s Information</h2>
+            <label for="doctor-name">Name:</label>
+            <input type="text" id="doctor-name" name="doctor-name" value="K.MIKE" required>
+
+            <label for="license-number">Medical License Number:</label>
+            <input type="text" id="license-number" name="license-number" value="PED-74537883" required>
+
+            <label for="clinic-address">Clinic/Hospital Address:</label>
+            <textarea id="clinic-address" name="clinic-address" required>478329 Maple Street Springfield, IL 6270</textarea>
+
+            <label for="doctor-email">Email Address:</label>
+            <input type="email" id="doctor-email" name="doctor-email" value="MIKE.K@email.com" required>
+
+            <label for="doctor-phone">Phone Number:</label>
+            <input type="tel" id="doctor-phone" name="doctor-phone" value="+1 (555) 123-4567" required>
+
+            <h2>Patient’s Information</h2>
+            <label for="patient-name">Patient’s Name:</label>
+            <input type="text" id="patient-name" name="patient-name" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="sex">Sex:</label>
+            <select id="sex" name="sex" required>
+                <option value="">Select</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="patient-address">Address:</label>
+            <textarea id="patient-address" name="patient-address" required></textarea>
+
+            <label for="patient-email">Email Address:</label>
+            <input type="email" id="patient-email" name="patient-email" required>
+
+            <label for="patient-phone">Phone Number:</label>
+            <input type="tel" id="patient-phone" name="patient-phone" required>
+
+            <h2>Insurance Information</h2>
+            <label for="insurance-info">Insurance Details:</label>
+            <textarea id="insurance-info" name="insurance-info">
+
+                 KLIPPA HEALTH INC
+
+                 1) Full name [  ]
+                 2) Date of birth [  ]
+                 3) Nationality [  ]
+                 4) Valid until [  ]
+                 5) Health Plan [   ]
+                 6) Member ID [  ]
+
+            </textarea>
+
+            <h2>Prescription</h2>
+            <label for="medication">Medication:</label>
+            <input type="text" id="medication" name="medication" required>
+
+            <label for="dosage">Dosage:</label>
+            <input type="text" id="dosage" name="dosage" required>
+
+            <label for="frequency">Frequency and Duration:</label>
+            <input type="text" id="frequency" name="frequency" required>
+
+            <label for="instructions">Instructions:</label>
+            <textarea id="instructions" name="instructions" required></textarea>
+
+            <label for="remarks">Remarks:</label>
+            <textarea id="remarks" name="remarks"></textarea>
+
+            <h2>Doctor’s Name and Signature</h2>
+            <label for="doctor-signature">Name:</label>
+            <input type="text" id="doctor-signature" name="doctor-signature" value="K.MIKE" required>
+
+            <label for="signature">Signature:</label>
+            <input type="text" id="signature" name="signature" value="MIKE" required>
+
+            <button type="button" onclick="printPrescription()">Print Prescription</button>
+            <button type="submit">Submit to Database</button>
+        </form>
+    </section>
+</body>
+<footer>
+    <p>&copy; NexPrescribe 2024 Designed and developed by SNS Srinivas</p>
+</footer>
+</html>
+
